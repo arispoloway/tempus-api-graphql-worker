@@ -1,0 +1,17 @@
+{
+	"private": true,
+	"version": "0.0.1",
+	"scripts": {
+		"deploy": "wrangler publish index.js",
+		"dev": "wrangler dev index.js --local",
+		"start-stackblitz": "WRANGLER_SEND_METRICS=false wrangler dev index.js --local"
+	},
+	"dependencies": {
+		  "itty-router": "^2.6.1",
+      "tempus-api-graphql": "^0.5.0",
+      "graphql": "^15.3.0"
+	},
+	"devDependencies": {
+		"wrangler": "^2.2.2"
+	}
+}
