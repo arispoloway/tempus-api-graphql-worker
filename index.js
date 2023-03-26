@@ -3,7 +3,7 @@ import { newCachedTempusFetcher, newTempusSchema } from 'tempus-api-graphql';
 import { graphql } from 'graphql';
 import playground from './playground';
 
-const BASE_URL = "https://tempus.xyz/api/";
+const BASE_URL = "https://tempus2.xyz/api/v0/";
 const graphQLOptions = {
   baseEndpoint: '/',
   playgroundEndpoint: '/',
