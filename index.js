@@ -15,7 +15,14 @@ const graphQLOptions = {
 const router = Router();
 
 async function fetchResponseByUrl(url) {
-  let res = await fetch(`${BASE_URL}${url}`);
+  const full_url = `${BASE_URL}${url}`;
+  let res = await fetch(full_url);
+  console.log(`[${res.status}] Fetched ${full_url}`);
+
+  if (res.status >= 400) {
+    return null;
+  }
+
   res = await res.json();
   return res.error ? null : res;
 }
